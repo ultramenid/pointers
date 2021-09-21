@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/style.output.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Index</title>
+</head>
+<body>
+    
+    
+    <div class="max-w-6xl mx-auto" x-data="{ archive:false, search:false, form:false }">
+        <!-- header -->
+        <header class="sticky top-0 z-10 flex px-2 py-2 justify-between items-center border-b border-opacity-20 bg-black ">
+            <div class="flex space-x-3 items-center">
+                <template x-if="!archive">
+                  <svg  @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
+                </template>
+                <template x-if="archive">
+                  <svg @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </template>
+                  <a href="#" class="text-white font-semibold text-2xl hover:text-gray-400">POINTERS</a>
+            </div>
+            <div class="flex space-x-3">
+                <svg @click="search = ! search, archive = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <svg @click="form= !form, archive = false, search= false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+            </div>
+        </header>
+
+        <!-- Archive  -->
+        <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"  
+            x-show="archive"
+            x-transition:enter="transition ease-in-out duration-150"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in-out duration-150"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            x-cloak style="display: none !important"
+            x-data="{ state2021:false, state2020:false, state2019: false} "
+            >
+
+
+            <h2 class="text-3xl text-white mb-4">Archive</h2>
+              
+            <!-- 2021 -->
+            <div @click="state2021 = ! state2021" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
+              <a class="text-2xl font-black text-white">2021</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div x-show="state2021"  x-cloak style="display: none !important" class="mb-6 px-6">
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">11-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">22-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+              </div>
+            </div>
+
+            <!-- 2020 -->
+            <div @click="state2020 = ! state2020" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
+              <a class="text-2xl font-black text-white">2020</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div x-show="state2020"  x-cloak style="display: none !important" class="mb-6 px-6">
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">11-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">22-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+              </div>
+            </div>
+
+
+            <!-- 2019 -->
+            <div @click="state2019 = ! state2019" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer">
+              <a class="text-2xl font-black text-white">2019</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div x-show="state2019"  x-cloak style="display: none !important" class="mb-6 px-6">
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">11-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">22-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+              </div>
+            </div>
+        </div>
+
+        <!-- search -->
+        <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
+        x-show="search"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        x-cloak style="display: none !important"
+        >
+          <div class="relative text-gray-600 focus-within:text-gray-400 py-6">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </button>
+            </span>
+            <input type="search" name="q" class=" w-full py-3 text-sm text-gray-200 bg-gray-600 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
+          </div>
+        </div>
+
+        <!-- form -->
+        <div class="fixed flex items-center h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
+        x-show="form"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        x-cloak style="display: none !important"
+        x-data="{formLogin:true, formRegister:false}"
+        >
+
+          <!-- form login -->
+          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formLogin" x-cloak style="display: none !important">
+            <form>
+                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
+                  <div class="px-6  mb-4">
+                      <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
+                      <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6  mb-4">
+                      <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
+                      <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6 mb-4 text-right">
+                      <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                          Login
+                      </button>
+                      <p class=" text-center mt-4 "><a @click="formLogin = false, formRegister = true" class="hover:underline cursor-pointer">Register</a></p>
+                  </div>
+              </form>
+          </div>
+
+          <!-- form Register -->
+          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formRegister" x-cloak style="display: none !important">
+            <form>
+                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
+                  <div class="px-6  mb-4">
+                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Name:</label>
+                    <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                  <div class="px-6  mb-4">
+                      <label  class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
+                      <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6  mb-4">
+                      <label  class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
+                      <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6  mb-4">
+                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Confirm Password:</label>
+                    <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                <div class="px-6  mb-4">
+                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Company:</label>
+                  <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                <div class="px-6  mb-4">
+                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Country:</label>
+                  <div class="relative inline-flex w-full">
+                    <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+                    <select class="border border-gray-400 rounded w-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                      <option>Select country</option>
+                      <option>Indonesia</option>
+                      <option>Malaysia</option>
+                      <option>Singapore</option>
+                      <option>Thailand</option>
+                      <option>Japan</option>
+                      <option>Vietnam</option>
+                      <option>Myanmar</option>
+                      <option>Brunei</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="px-6 mb-4 text-right">
+                      <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                          Submit
+                      </button>
+                      <p class=" text-center mt-4 "><a @click="formLogin = true, formRegister = false" class="hover:underline cursor-pointer">Login</a></p>
+                  </div>
+              </form>
+          </div>
+        </div>
+
+
+        <!-- hero -->
+        <div class="relative flex h-56 items-center mb-6">
+            <img loading="lazy" src="assets/hero.jpg" alt="" class="absolute w-full h-56 object-cover" >
+              <div class="sm:w-9/12 w-full  relative px-6">
+                <a class=" lg:text-5xl md:text-4xl text-2xl  uppercase text-white tracking-widest">Palm oil internet Seminar</a>
+              </div>
+              <div class="sm:w-3/12 w-full relative h-56  bg-green-200 opacity-80 flex  flex-col py-12 items-center">
+                  <a class="px-6">Organized By:</a>
+                  <img loading="lazy" src="assets/auriga.png" alt="" class="lg:w-40 w-20">
+              </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="border-b border-gray-400 mb-6">
+          <h1 class="text-3xl  text-black px-2 py-3">Archive Highlights</h1>
+        </div>
+
+        <!-- card -->
+        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Updates on Biodiesel Development and Production Forecast in the EU</a>
+          <p class="font-light">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
+                  <a class="font-light">MPOC</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker40.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
+                  <a class="font-light">MPOC</a>
+                </div>
+            </div>
+
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+            
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b  border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html"  class="text-4xl font-black cursor-pointer  hover:text-green-800">Updates on Biodiesel Development and Production Forecast in the EUChina – Outlook for Palm Oil with Higher Soyabean Import Expected in 2018</a>
+          <p class="font-light">In the context of lower growth of G3 soybean output forecasted in 2017/18, soybean prices for this marketing year will be rather firmer as compared to 2016/17....</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker120.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker36.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
+                  <a class="font-light">MPOC</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker127.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
+                </div>
+            </div>
+
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Malaysian Sustainable Palm Oil (MSPO) Certification Guidelines and Updates</a>
+          <p class="font-light">Malaysian Sustainable Palm Oil (MSPO) has been gazetted as Malaysian Standard (MS) on the 5th September 2013 and launched by YAB Deputy Prime Minister on 19...</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker56.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker51.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
+                  <a class="font-light">MPOC</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker81.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
+                </div>
+            </div>
+
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b  border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Myanmar Palm Oil Market – Potential and Challenges of Exporting Malaysian Palm Oil</a>
+          <p class="font-light">I will be presenting a power point presentation on Palm Oil Internet Seminar and my topic is Myanmar Palm Oil Market and Potential & Challenges of Exporting...</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker47.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+            </div>
+
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
+          <p class="font-light">Countries every year commission changes in policy. This is to address intrinsic pressure of a country to develop its economy, improve technologies, address...</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
+                  <a class="font-light">MPOC</a>
+                </div>
+            </div>
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Palm Oil Outlook - Focus on the Smaller CIS Countries - Belarus, Kazakhstan and Armenia</a>
+          <p class="font-light">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+            </div>
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Impact of the 2015 El Niño and post El Niño weather condition on palm and vegetable oil supplies and prices</a>
+          <p class="font-light">Director, Gan Ling Sdn....</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+            </div>
+
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+        <!-- card -->
+        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
+          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Palm Kernel Cake: Inherent Properties Raise Global Feed Market Opportunities</a>
+          <p class="font-light">Palm Kernel Cake (PKC) has moved up steeply in the value chain. From an average annual price of US$50/MT that was traded in 1999, the price of PKC has...</p>
+          <div class="flex space-x-3 mb-8">
+            <p class="font-light"><a class="font-semibold">46</a> Views </p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+            <p class="border-l"></p>
+            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+          </div>
+          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
+                  <a class="font-light">Sunseedman</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
+                  <a class="font-light">MPOC</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker40.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
+                </div>
+            </div>
+            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
+          </div>
+        </div>
+
+
+        <!-- footer -->
+        <footer class="bg-black px-4 py-4">
+          <div class="sm:flex flex-row justify-between sm:space-y-0 space-y-6">
+            <div>
+                <h2 class="uppercase text-white text-3xl font-bold mb-6">Footer</h2>
+                <p class="text-white w-64">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quibusdam, repellat amet impedit cumque corrupti asperiores temporibus! Minus autem nisi cumque perspiciatis, veniam aperiam alias corrupti voluptatem, vel at tenetur!
+                </p>
+            </div>
+            <div class="sm:text-right text-left space-y-4 flex flex-col">
+              
+
+                {{-- sosmed --}}
+                <div class="flex space-x-6 text-right">
+                    <img  loading="lazy" src="https://rmidev.herokuapp.com/assets/twitter.svg" alt="" class="w-5 mt-10 ">
+                    <img  loading="lazy" src="https://rmidev.herokuapp.com/assets/facebook.svg" alt="" class="w-5 mt-10">
+                    <img  loading="lazy" src="https://rmidev.herokuapp.com/assets/ig.png" alt="" class="h-5 mt-10" >
+                    <img  loading="lazy" src="https://rmidev.herokuapp.com/assets/linkedin.png" alt="" class="w-5 mt-10">
+                </div>
+            </div>
+        </div>
+        <p class="text-white sm:text-right text-left mt-12">
+          ©2021. Copyright protected by law. <a class="font-bold">Privacy Policy</a> | <a class="font-bold">Disclaimer</a>
+        </p>
+        </footer>
+    </div>
+
+    
+
+</body>
+</html>

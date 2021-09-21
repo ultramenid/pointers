@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-pointers {
+    width: 72rem;
+}
+
+@layer utilities {
+    @variants responsive {
+        .w-pointers {
+            width: 72rem;
+        }
+    }
+  }

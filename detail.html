@@ -1,0 +1,470 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/style.output.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Detail</title>
+</head>
+<body>
+    
+    
+    <div class="max-w-6xl mx-auto" x-data="{ archive:false, search:false, form:false }">
+        <!-- header -->
+        <header class="sticky top-0 z-10 flex px-2 py-2 justify-between items-center border-b border-opacity-20 bg-black ">
+            <div class="flex space-x-3 items-center">
+                <template x-if="!archive">
+                  <svg  @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                  </svg>
+                </template>
+                <template x-if="archive">
+                  <svg @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </template>
+                  <a href="index.html" class="text-white font-semibold text-2xl hover:text-gray-400">POINTERS</a>
+            </div>
+            <div class="flex space-x-3">
+                <svg @click="search = ! search, archive = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                  <svg @click="form= !form, archive = false, search= false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+            </div>
+        </header>
+
+        <!-- Archive  -->
+        <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"  
+            x-show="archive"
+            x-transition:enter="transition ease-in-out duration-150"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in-out duration-150"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            x-cloak style="display: none !important"
+            x-data="{ state2021:false, state2020:false, state2019: false} "
+            >
+
+
+            <h2 class="text-3xl text-white mb-4">Archive</h2>
+              
+            <!-- 2021 -->
+            <div @click="state2021 = ! state2021" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
+              <a class="text-2xl font-black text-white">2021</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div x-show="state2021"  x-cloak style="display: none !important" class="mb-6 px-6">
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">11-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">22-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+              </div>
+            </div>
+
+            <!-- 2020 -->
+            <div @click="state2020 = ! state2020" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
+              <a class="text-2xl font-black text-white">2020</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div x-show="state2020"  x-cloak style="display: none !important" class="mb-6 px-6">
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">11-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">22-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+              </div>
+            </div>
+
+
+            <!-- 2019 -->
+            <div @click="state2019 = ! state2019" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer">
+              <a class="text-2xl font-black text-white">2019</a>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+            </div>
+            <div x-show="state2019"  x-cloak style="display: none !important" class="mb-6 px-6">
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">11-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+              </div>
+              <div class="mb-2 cursor-pointer">
+                <a class="font-light text-sm text-white">22-11 APR 2021</a>
+                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+              </div>
+            </div>
+        </div>
+
+        <!-- search -->
+        <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
+        x-show="search"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        x-cloak style="display: none !important"
+        >
+          <div class="relative text-gray-600 focus-within:text-gray-400 py-6">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </button>
+            </span>
+            <input type="search" name="q" class=" w-full py-3 text-sm text-gray-200 bg-gray-600 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
+          </div>
+        </div>
+
+        <!-- form -->
+        <div class="fixed flex items-center h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
+        x-show="form"
+        x-transition:enter="transition ease-in-out duration-150"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in-out duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        x-cloak style="display: none !important"
+        x-data="{formLogin:true, formRegister:false}"
+        >
+
+          <!-- form login -->
+          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formLogin" x-cloak style="display: none !important">
+            <form>
+                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
+                  <div class="px-6  mb-4">
+                      <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
+                      <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6  mb-4">
+                      <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
+                      <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6 mb-4 text-right">
+                      <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                          Login
+                      </button>
+                      <p class=" text-center mt-4 "><a @click="formLogin = false, formRegister = true" class="hover:underline cursor-pointer">Register</a></p>
+                  </div>
+              </form>
+          </div>
+
+          <!-- form Register -->
+          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formRegister" x-cloak style="display: none !important">
+            <form>
+                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
+                  <div class="px-6  mb-4">
+                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Name:</label>
+                    <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                  <div class="px-6  mb-4">
+                      <label  class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
+                      <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6  mb-4">
+                      <label  class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
+                      <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  </div>
+                  <div class="px-6  mb-4">
+                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Confirm Password:</label>
+                    <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                <div class="px-6  mb-4">
+                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Company:</label>
+                  <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                <div class="px-6  mb-4">
+                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Country:</label>
+                  <div class="relative inline-flex w-full">
+                    <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+                    <select class="border border-gray-300 rounded w-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                      <option>Select country</option>
+                      <option>Indonesia</option>
+                      <option>Malaysia</option>
+                      <option>Singapore</option>
+                      <option>Thailand</option>
+                      <option>Japan</option>
+                      <option>Vietnam</option>
+                      <option>Myanmar</option>
+                      <option>Brunei</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="px-6 mb-4 text-right">
+                      <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                          Submit
+                      </button>
+                      <p class=" text-center mt-4 "><a @click="formLogin = true, formRegister = false" class="hover:underline cursor-pointer">Login</a></p>
+                  </div>
+              </form>
+          </div>
+        </div>
+
+
+        <!-- hero -->
+        <div class="relative flex h-56 items-center mb-6">
+            <img src="assets/hero.jpg" alt="" class="absolute w-full h-56 object-cover">
+              <div class="sm:w-9/12 w-full  relative px-6">
+                <a class=" lg:text-5xl md:text-4xl text-2xl  uppercase text-white tracking-widest">Palm oil internet Seminar</a>
+              </div>
+              <div class="sm:w-3/12 w-full relative h-56  bg-green-200 opacity-80 flex  flex-col py-12 items-center">
+                  <a class="px-6">Organized By:</a>
+                  <img src="assets/auriga.png" alt="" class="lg:w-40 w-20">
+              </div>
+        </div>
+
+        <!-- Title -->
+        <div class="border-b border-gray-300 mb-6 px-4 py-2">
+          <h1 class="text-4xl font-black">Updates on Biodiesel Development and Production Forecast in the EU</h1>
+        </div>
+
+        <!-- content -->
+        <div x-data="{profile1:false, profile2:false, profile3:false, profile4:false}"  class="py-6 px-4 ">
+            <!-- profile -->
+            <div  class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 " >
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a @click="profile1 = ! profile1, profile2 = false, profile3= false, profile4= false" class="mt-1 font-semibold underline cursor-pointer">Mr. Veysel Kaya</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a @click="profile2 = ! profile2, profile1 = false, profile3= false, profile4= false" class="mt-1 font-semibold underline cursor-pointer">Tan Sri Datuk Dr. Yusof Basiron</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker40.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a @click="profile3 = ! profile3, profile2 = false, profile1= false, profile4= false" class="mt-1 font-semibold underline cursor-pointer">Dr. Kerstin Busch</a>
+                </div>
+                <div class="flex flex-col items-center">
+                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
+                  <a @click="profile4 = ! profile4, profile2 = false, profile3= false, profile1= false" class="mt-1 font-semibold underline cursor-pointer">Tan Sri Datuk Dr. Yusof Basiron</a>
+                </div>
+            </div>
+          <div class="bg-gray-200 px-2 py-2" x-show="profile1" x-cloak style="display: none !important">
+            <p class="text-black">
+              from Universiti Kebangsaan Malaysia. He has carried out research works on various aspects of palm oil such as feasibility study on producing organic palm oil, marketing and price dynamics of PKE and its future competitiveness, relationship of futures price and physical price of palm oil, simulation study on the availability of palm oil stock and its development, a review on palm oil supply and disappearance, effects of exchange rate on exports of oil palm products to selected markets and impact of labelling on palm oil in the US market. He wrote a number of papers and published them in journals. He also participated in lectures and local seminars. He is currently a Senior Research Officer, Techno Economy Research Unit, Economics and Industry Development at Malaysian Palm Oil Board (MPOB).
+            </p>
+          </div>
+          <div class="bg-gray-200 px-2 py-2" x-show="profile2" x-cloak style="display: none !important">
+            <p class="text-black">
+              from Brandon University, Canada, majoring in Economics and Psychology and Master in Public Policy from University of Malaya. He has been involved with the palm oil industry for 25 years. He started his career with FELDA Marketing, MPOC, Golden Hope Plantations and as consultants to several private companies. During his career he has been involved in the marketing of palm oil products and the development of the oil palm industry at local and international level. He is currently the Director of Marketing and Market Development for MPOC.
+            </p>
+          </div>
+          <div class="bg-gray-200 px-2 py-2" x-show="profile3" x-cloak style="display: none !important">
+            <p class="text-black">
+              He graduated in the fields of Statistics and Computer Science. This gives him a multiple background to serve as a researcher/modeler at PORIM/MPOB for the past twenty years. He carried out researches related to modeling of oils and fats using statistics as a tool. With the aids of models, he is a forecaster for MPOB, especially for production and price of palm oil and other oils and fats. With his knowledge, he wrote a number of papers and published them in journals. He also participated in lectures, local and international seminars/conferences. He presented papers at KLCE palm oil outlook seminar, and PIPOC international conferences in 2007 and 2009. He had actively presented papers in China in promoting palm oil to the Chinese traders for the past five years. This participation had increased awareness and interest among the Chinese in consuming more palm oil which ultimately increased their imports of palm oil from Malaysia.
+            </p>
+          </div>
+          <div class="bg-gray-200 px-2 py-2" x-show="profile4" x-cloak style="display: none !important">
+            <p class="text-black">
+              is an agricultural consultant with over 25 years of experience as a cash grain merchandiser and futures industry participant. She worked at A.E. Staley for over six years as a grain merchandiser, trading soybeans, soymeal and corn out of the Des Moines, Iowa soybean processing plant, and the Lafayette, Indiana wet milling corn plant. As Grain Division Manager in Lafayette, Indiana, Ms. Goll oversaw grain merchandising, basis trading, truck and rail logistics, contracting with specialty corn growers and originated corn for two wet milling plants. She also managed offsetting hedge and spread strategies for the Lafayette futures position. Ms. Goll spent the next two years as a farm market advisor for a farm advisory firm assisting producers in cost of production analysis, grain storage management, marketing their crops using cash contracts, as well as, hedging with futures and options contracts. She joined the Chicago Board of Trade in 1989. During her six years with the exchange, she traveled worldwide teaching the use of agricultural futures and options markets. Ms. Goll travelled extensively to SE Asia, as well as Europe, working with producers and commercial businesses as they learned to apply futures and options markets to their cash market activities. Additionally, she specialized in the writings of educational materials and authored booklets for the commercial hedger, her primary focas being the practical use and application of futures and options markets. Her first hand knowledge and use of this complex subject matter and ability to simplify for practical application is what has made her work sought-after around the world. Also while with the Chicago Board of Trade, Ms. Goll worked in product development and marketing, speaking to agricultural businesses and diplomats worldwide on the benefits of futures and options markets. She designed extensive marketing campaigns for various products as well. Sue Goll has been self-employed as a consultant since 1995. In this capacity, she works with domestic and foreign businesses teaching cash/physical market fundamentals, the practical use of futures and options, and writing technical materials for publication. Ms. Goll has worked with clients in multiple countries including SE. Asia, Asia, S. Africa, Europe, S. America and the United States. Over her career, Ms. Goll has been a member of various Grain and Feed organizations and the National Grain and Feed Association. Goll is a graduate in Agricultural Economics from The Ohio State University. She graduated with honors, was a member of Towers Honorary and Sigma Alfa professional agricultural sorority.
+            </p>
+          </div>
+
+
+            <!-- article -->
+            <div class="mb-8 ">
+                <p class="mt-4">Middle East and North Africa (MENA) comprises of 25 countries with a population of almost 700 million people or 10% of the total world population. It is a region with colorful landscapes posed many challenges to trades including oils and fats. In some countries like Libya, Syria and Yemen, uncertainty and post war violence continue to hinder progress. However, there are positive developments documented in some countries in the region such as reconstruction of Iraq and social and economic reforms in Egypt and Saudi Arabia.</p>
+                <p class="mt-4">MENA, particularly GCC countries are well connected with other countries across the globe due to their position as major oils and gas exporters. On the other hand, they are dependent on imports for the supply of food items including vegetable oils.</p>
+                <p class="mt-4">The region does not produce sufficient oilseed for domestic use, it has to depend on imported oilseed and oils and fats to supplement its domestic requirement of oils and fats. The market currently consumed 27% of palm oil, 25% of sunflower oil and 19% soybean oil and others 29%. In 2018, the region imported 48% palm oil, 28% sunflower oil and 18% soybean oil.</p>
+                <p class="mt-4">In view of the market size and the region’s dependence on imports as their main source of oils and fats supply, it provides a ready market for palm oil and therefor this paper will explore potential areas for palm oil, particularly Malaysian palm oil to further expand and sustain in the market.</p>
+            </div>
+            
+            
+            <!-- video -->
+            <!-- ratio video https://www.themes.dev/blog/easily-embed-responsive-youtube-video-with-tailwind-css/ -->
+            <div class="aspect-w-16 aspect-h-9 mb-4">
+                <iframe loading="lazy"  src="https://www.youtube.com/embed/HBOHnkYKzJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- media -->
+            <div class="flex sm:flex-row flex-col sm:space-x-2 space-x-0 space-y-2 sm:space-y-0 mb-12">
+                <div class="flex bg-black py-2 px-2 sm:w-1/2 w-full space-x-2 items-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    <a class="text-white uppercase">
+                        View full report
+                    </a>
+                </div>
+                
+                <div class="flex bg-black py-2 px-2 sm:w-1/2 w-full space-x-2 items-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
+                    <a class="text-white uppercase">
+                        View full report
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- sharer -->
+            <div class="flex mb-2 space-x-4">
+                <div class="flex items-center space-x-2 cursor-pointer hover:text-gray-400">
+                    <svg id="facebook_share" class="" data-testid="social-icon-Facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><path id="social-icon-facebook_share-facebook-a" d="M10.424 16V9.96h2.014l.31-2.35h-2.324V6.113c0-.379.082-.663.245-.852.164-.19.47-.284.917-.284h1.239V2.886c-.276-.069-.878-.103-1.807-.103-.93 0-1.665.27-2.208.813-.542.542-.813 1.303-.813 2.284v1.73h-2.04v2.35h2.04V16H0V0h16v16h-5.576z"></path></defs><g fill="none" fill-rule="evenodd"><path class="social-icon-secondary" fill="#fff" d="M-50-50h917V70H-50z"></path><mask id="social-icon-facebook_share-facebook-b" fill="#fff"><use xlink:href="#social-icon-facebook_share-facebook-a"></use></mask><g class="social-icon-primary" fill="#000" mask="url(#social-icon-facebook_share-facebook-b)"><path d="M0 0h16v16H0z"></path></g></g></svg>
+                    <a class="text-sm underline">Share</a>
+                </div>
+                <div class="flex items-center space-x-1 cursor-pointer hover:text-gray-400">
+                    <svg id="twitter_share" class="" data-testid="social-icon-Twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="14" viewBox="0 0 18 14"><defs><path id="social-icon-twitter_share-twitter-a" d="M16.172 3.5v.438c0 1.166-.229 2.347-.686 3.542a10.017 10.017 0 0 1-2.021 3.239c-.89.964-1.99 1.753-3.296 2.364-1.307.611-2.81.917-4.509.917-.515 0-1.025-.034-1.53-.101a10.435 10.435 0 0 1-2.847-.8A9.927 9.927 0 0 1 0 12.42a10.295 10.295 0 0 0 .879.033c.855 0 1.679-.13 2.47-.387a6.942 6.942 0 0 0 2.135-1.127c-.808 0-1.529-.233-2.162-.699a3.63 3.63 0 0 1-1.318-1.758c.117.033.231.053.343.059.111.005.231.008.36.008a4.741 4.741 0 0 0 .984-.1 3.662 3.662 0 0 1-2.109-1.23 3.323 3.323 0 0 1-.844-2.237v-.068c.246.135.507.242.783.32.275.079.565.118.87.118a3.491 3.491 0 0 1-1.196-1.237 3.295 3.295 0 0 1-.457-1.69c0-.315.047-.624.14-.926.095-.303.224-.59.388-.859a9.61 9.61 0 0 0 1.511 1.464 10.647 10.647 0 0 0 3.859 1.902c.72.19 1.462.303 2.223.336a3.275 3.275 0 0 1-.105-.807c0-.483.097-.94.29-1.372.193-.432.457-.807.791-1.127A3.759 3.759 0 0 1 12.445 0c.54 0 1.04.101 1.503.303.463.202.864.471 1.204.808a8.246 8.246 0 0 0 1.23-.329c.4-.14.774-.31 1.126-.513-.14.404-.352.774-.633 1.11a3.85 3.85 0 0 1-.984.842c.363-.045.72-.112 1.072-.202.351-.09.697-.213 1.037-.37A8.305 8.305 0 0 1 16.172 3.5z"></path></defs><g fill="none" fill-rule="evenodd"><path class="social-icon-secondary" fill="#fff" d="M-116-50h917V70h-917z"></path><mask id="social-icon-twitter_share-twitter-b" fill="#fff"><use xlink:href="#social-icon-twitter_share-twitter-a"></use></mask><g class="social-icon-primary" fill="#000" mask="url(#social-icon-twitter_share-twitter-b)"><path d="M0 0h18v14H0z"></path></g></g></svg>
+                    <a class="text-sm underline">Share</a>
+                </div>
+            </div>
+
+            <!-- like, views, comment -->
+            <div class="flex space-x-3 mb-6">
+                <p class="font-light"><a class="font-semibold">46</a> Views </p>
+                <p class="border-l"></p>
+                <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+                <p class="border-l"></p>
+                <p class="font-light cursor-pointer"><a class="font-semibold">41</a> Liked</p>
+            </div>
+
+            <!-- Q  &  A -->
+            <div class=" border border-gray-400 px-6 py-6" x-data="{ comment1:false, comment2:false, comment3:false, comment4:false }">
+                <div class="border-b border-gray-400 mb-8">
+                    <h2 class="text-3xl">Questions & Answers</h2>
+                </div>
+                
+                <div class="mb-6"> 
+                    <h2 class="font-black text-2xl">Comment</h2>
+                    <textarea name="" id="" rows="5"  class="w-full border border-gray-300 px-2 py-1"></textarea>
+                    <button class="bg-black text-white px-5 py-1 cursor-pointer hover:bg-white hover:text-black border hover:border-black">Submit</button>
+                </div>
+
+                <!-- comments -->
+                <div class="border-t border-gray-300 py-4 flex flex-col">
+                   <a class="font-semibold text-xl">Edmund Yong:</a>
+                   <p>Any process needed to overcome GE contents?</p>
+                   <a class="font-light text-xs">2 Years ago</a>
+
+                   <!-- reply -->
+                   <div class="pl-6  mt-4">
+                       <div class="mb-1 bg-gray-200 py-2 px-2">
+                            <a class="font-semibold text-xl">Cai Neng Bin:</a>
+                            <p>According to the data tracked, China's current order of soybean shipments from Brazil in 2021 is about 61 million MT, 3.98 and 11.1 million MT shipped in February and March respectively.</p>
+                            <a class="font-light text-xs">5 months ago</a>
+                       </div>
+                       <div class="mb-1 bg-gray-200 py-2 px-2">
+                            <a class="font-semibold text-xl">Cai Neng Bin:</a>
+                            <p>At present, China and the United States trade relationship is in good order and trade war will not reach very serious level. The sales of American soybeans to China are coming to an end, and this will lead to declining sales in near term. Buyers are focusing more on new season planting.</p>
+                            <a class="font-light text-xs">1 months ago</a>
+                        </div>
+                   </div>
+                   
+                   <a class="mt-4 font-semibold cursor-pointer" @click="comment1 = ! comment1">Reply</a>
+                   <div x-show="comment1" x-cloak style="display: none !important">
+                        <textarea name="" id="" rows="5"  class="w-full border border-gray-300 px-2 py-1"></textarea>
+                        <button class="bg-black text-white px-5 py-1 cursor-pointer hover:bg-white hover:text-black border hover:border-black">Submit</button>
+                   </div>
+                </div>
+
+                <!-- comments -->
+                <div class="border-t border-gray-300 py-4 flex flex-col">
+                    <a class="font-semibold text-xl">Tey Poh Leng:</a>
+                    <p>What are the measure been taken from Malaysia Palm Oil industry to overcome 1-MCPD issue now?</p>
+                    <a class="font-light text-xs">12 Years ago</a>
+
+                    <!-- reply -->
+                   <div class="pl-6 mt-4">
+                        <div class="mb-1 bg-gray-200 py-2 px-2">
+                            <a class="font-semibold text-xl">Cai Neng Bin:</a>
+                            <p>According to the data tracked, China's current order of soybean shipments from Brazil in 2021 is about 61 million MT, 3.98 and 11.1 million MT shipped in February and March respectively.</p>
+                            <a class="font-light text-xs">5 months ago</a>
+                        </div>
+                    </div>
+
+                    <a class="mt-4 font-semibold cursor-pointer" @click="comment2 = ! comment2">Reply</a>
+                    <div x-show="comment2" x-cloak style="display: none !important">
+                         <textarea name="" id="" rows="5"  class="w-full border border-gray-300 px-2 py-1"></textarea>
+                         <button class="bg-black text-white px-5 py-1 cursor-pointer hover:bg-white hover:text-black border hover:border-black">Submit</button>
+                    </div>
+                 </div>
+
+                 <!-- comments -->
+                 <div class="border-t border-gray-300 py-4 flex flex-col">
+                    <a class="font-semibold text-xl">Hafiz:</a>
+                    <p>Understand that Malaysia has implemetned B20 prgram in certain areas and may be fully expanded by 2021. Please advise how much the additonal local consumption of palm oil once the B20 programme fully kick-off.</p>
+                    <a class="font-light text-xs">6 Years ago</a>
+                    
+                    <a class="mt-4 font-semibold cursor-pointer" @click="comment3 = ! comment3">Reply</a>
+                    <div x-show="comment3" x-cloak style="display: none !important">
+                         <textarea name="" id="" rows="5"  class="w-full border border-gray-300 px-2 py-1"></textarea>
+                         <button class="bg-black text-white px-5 py-1 cursor-pointer hover:bg-white hover:text-black border hover:border-black">Submit</button>
+                    </div>
+                 </div>
+
+                 <!-- comments -->
+                 <div class="border-t border-gray-300 py-4 flex flex-col">
+                    <a class="font-semibold text-xl">Hafiz:</a>
+                    <p>Hi there. Regarding the Supply Scenario for Indonesia, recently there is a news that B30 implementation is not as smooth as expected. Will this factor affecting the forecasted quantity for domestic consumption and also the global supply?</p>
+                    <a class="font-light text-xs">12 Years ago</a>
+                    
+                    <a class="mt-4 font-semibold cursor-pointer" @click="comment4 = ! comment4">Reply</a>
+                    <div x-show="comment4" x-cloak style="display: none !important">
+                         <textarea name="" id="" rows="5"  class="w-full border border-gray-300 px-2 py-1"></textarea>
+                         <button class="bg-black text-white px-5 py-1 cursor-pointer hover:bg-white hover:text-black border hover:border-black">Submit</button>
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- footer -->
+        <footer class="bg-black px-4 py-4">
+          <div class="sm:flex flex-row justify-between sm:space-y-0 space-y-6">
+            <div>
+                <h2 class="uppercase text-white text-3xl font-bold mb-6">Footer</h2>
+                <p class="text-white w-64">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quibusdam, repellat amet impedit cumque corrupti asperiores temporibus! Minus autem nisi cumque perspiciatis, veniam aperiam alias corrupti voluptatem, vel at tenetur!
+                </p>
+            </div>
+            <div class="sm:text-right text-left space-y-4 flex flex-col">
+              
+
+                {{-- sosmed --}}
+                <div class="flex space-x-6 text-right">
+                    <img loading="lazy" src="https://rmidev.herokuapp.com/assets/twitter.svg" alt="" class="w-5 mt-10 ">
+                    <img loading="lazy" src="https://rmidev.herokuapp.com/assets/facebook.svg" alt="" class="w-5 mt-10">
+                    <img loading="lazy" src="https://rmidev.herokuapp.com/assets/ig.png" alt="" class="h-5 mt-10" >
+                    <img loading="lazy" src="https://rmidev.herokuapp.com/assets/linkedin.png" alt="" class="w-5 mt-10">
+                </div>
+            </div>
+        </div>
+        <p class="text-white sm:text-right text-left mt-12">
+          ©2021. Copyright protected by law. <a class="font-bold">Privacy Policy</a> | <a class="font-bold">Disclaimer</a>
+        </p>
+        </footer>
+    </div>
+
+    
+
+</body>
+</html>
