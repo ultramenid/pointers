@@ -151,11 +151,11 @@
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
         x-cloak style="display: none !important"
-        x-data="{formLogin:true, formRegister:false}"
+        x-data="{form1: 'login'}"
         >
 
           <!-- form login -->
-          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formLogin" x-cloak style="display: none !important">
+          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'login'" x-cloak style="display: none !important">
             <form>
                   <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
                   <div class="px-6  mb-4">
@@ -170,13 +170,13 @@
                       <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                           Login
                       </button>
-                      <p class=" text-center mt-4 "><a @click="formLogin = false, formRegister = true" class="hover:underline cursor-pointer">Register</a></p>
+                      <p class=" text-center mt-4 "><a @click.prevent="form1 = 'register'" class="hover:underline cursor-pointer">Register</a></p>
                   </div>
               </form>
           </div>
 
           <!-- form Register -->
-          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formRegister" x-cloak style="display: none !important">
+          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'register'" x-cloak style="display: none !important">
             <form>
                   <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
                   <div class="px-6  mb-4">
@@ -220,7 +220,7 @@
                       <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
                           Submit
                       </button>
-                      <p class=" text-center mt-4 "><a @click="formLogin = true, formRegister = false" class="hover:underline cursor-pointer">Login</a></p>
+                      <p class=" text-center mt-4 "><a @click.prevent="form1 = 'login'" class="hover:underline cursor-pointer">Login</a></p>
                   </div>
               </form>
           </div>
