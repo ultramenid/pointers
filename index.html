@@ -60,17 +60,35 @@
               </svg>
             </div>
             <div x-show="state2021"  x-cloak style="display: none !important" class="mb-6 px-6">
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white ">05-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 1: CPO Price Trend</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white">11-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 2 : Global Palm Oil Market Focus</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white">22-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 3 :  Price Directions</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
             </div>
 
@@ -82,17 +100,35 @@
               </svg>
             </div>
             <div x-show="state2020"  x-cloak style="display: none !important" class="mb-6 px-6">
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white ">05-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 1: CPO Price Trend</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white">11-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 2 : Global Palm Oil Market Focus</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white">22-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 3 :  Price Directions</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
             </div>
 
@@ -105,17 +141,35 @@
               </svg>
             </div>
             <div x-show="state2019"  x-cloak style="display: none !important" class="mb-6 px-6">
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white ">05-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 1: CPO Price Trend</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white">11-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 2 : Global Palm Oil Market Focus</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
-              <div class="mb-2 cursor-pointer">
+              <div class="mb-2 cursor-pointer" x-data="{item:false}">
                 <a class="font-light text-sm text-white">22-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
+                <p class="text-2xl font-black text-white" @click="item=!item">FDD 3 :  Price Directions</p>
+                <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                  <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                  <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                  <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                  <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+                </ul>
               </div>
             </div>
         </div>
@@ -245,242 +299,99 @@
         </div>
 
         <!-- card -->
-        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Updates on Biodiesel Development and Production Forecast in the EU</a>
-          <p class="font-light">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
-                  <a class="font-light">MPOC</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker40.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
-                  <a class="font-light">MPOC</a>
-                </div>
+        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
+          <img src="https://sawit.info/img/ngopini/36d2c2e1-fd5f-45e9-8c59-6f5a319acb70.jpg" alt="" class="sm:w-4/12 w-full h-full">
+          <div class="h-full w-full">
+            <a href="detail.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Updates on Biodiesel Development and Production Forecast in the EU</a>
+            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+            <div class="sm:flex space-x-3 mb-8  hidden">
+              <p class="font-light"><a class="font-semibold">46</a> Views </p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
             </div>
-
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
-            
+          </div>
+        </div>
+         <!-- card -->
+         <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
+          <img src="https://sawit.info/img/ngopini/cfac1c44-927e-49d8-bb49-5a8d0502ec8f.jpg" alt="" class="sm:w-4/12 w-full h-full">
+          <div class="h-full w-full">
+            <a href="detail.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Malaysian Sustainable Palm Oil (MSPO) Certification Guidelines and Updates</a>
+            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+            <div class="sm:flex space-x-3 mb-8  hidden">
+              <p class="font-light"><a class="font-semibold">46</a> Views </p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+            </div>
           </div>
         </div>
 
+         <!-- card -->
+         <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
+          <img src="https://sawit.info/img/ngopini/96064ccc-1458-4466-b954-6efe36f8d518.jpeg" alt="" class="sm:w-4/12 w-full h-full">
+          <div class="h-full w-full">
+            <a href="detail.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
+            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+            <div class="sm:flex space-x-3 mb-8  hidden">
+              <p class="font-light"><a class="font-semibold">46</a> Views </p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+            </div>
+          </div>
+        </div>
+      
+
+         <!-- card -->
+         <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
+          <img src="https://sawit.info/img/ngopini/450e36a4-a929-408d-9f6d-15f7d3805aaa.jpg" alt="" class="sm:w-4/12 w-full h-full">
+          <div class="h-full w-full">
+            <a href="detail.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
+            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+            <div class="sm:flex space-x-3 mb-8  hidden">
+              <p class="font-light"><a class="font-semibold">46</a> Views </p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+            </div>
+          </div>
+        </div>
         <!-- card -->
-        <div class="  sm:border border-b  border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html"  class="text-4xl font-black cursor-pointer  hover:text-green-800">Updates on Biodiesel Development and Production Forecast in the EUChina – Outlook for Palm Oil with Higher Soyabean Import Expected in 2018</a>
-          <p class="font-light">In the context of lower growth of G3 soybean output forecasted in 2017/18, soybean prices for this marketing year will be rather firmer as compared to 2016/17....</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker120.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker36.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
-                  <a class="font-light">MPOC</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker127.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
-                </div>
+        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
+          <img src="https://sawit.info/img/ngopini/911fc260-836c-4a73-8e93-3954882f0ec4.jpg" alt="" class="sm:w-4/12 w-full h-full">
+          <div class="h-full w-full">
+            <a href="detail.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
+            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+            <div class="sm:flex space-x-3 mb-8  hidden">
+              <p class="font-light"><a class="font-semibold">46</a> Views </p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
             </div>
-
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
           </div>
         </div>
-
         <!-- card -->
-        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Malaysian Sustainable Palm Oil (MSPO) Certification Guidelines and Updates</a>
-          <p class="font-light">Malaysian Sustainable Palm Oil (MSPO) has been gazetted as Malaysian Standard (MS) on the 5th September 2013 and launched by YAB Deputy Prime Minister on 19...</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker56.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker51.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
-                  <a class="font-light">MPOC</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker81.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
-                </div>
+        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
+          <img src="https://sawit.info/img/ngopini/6ee1da8a-ab23-4111-a07c-5c7fa34aa062.jpeg" alt="" class="sm:w-4/12 w-full h-full">
+          <div class="h-full w-full">
+            <a href="detail.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
+            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
+            <div class="sm:flex space-x-3 mb-8  hidden">
+              <p class="font-light"><a class="font-semibold">46</a> Views </p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
+              <p class="border-l"></p>
+              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
             </div>
-
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
           </div>
         </div>
-
-        <!-- card -->
-        <div class="  sm:border border-b  border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Myanmar Palm Oil Market – Potential and Challenges of Exporting Malaysian Palm Oil</a>
-          <p class="font-light">I will be presenting a power point presentation on Palm Oil Internet Seminar and my topic is Myanmar Palm Oil Market and Potential & Challenges of Exporting...</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker47.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-            </div>
-
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
-          </div>
-        </div>
-
-        <!-- card -->
-        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
-          <p class="font-light">Countries every year commission changes in policy. This is to address intrinsic pressure of a country to develop its economy, improve technologies, address...</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
-                  <a class="font-light">MPOC</a>
-                </div>
-            </div>
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
-          </div>
-        </div>
-
-        <!-- card -->
-        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Palm Oil Outlook - Focus on the Smaller CIS Countries - Belarus, Kazakhstan and Armenia</a>
-          <p class="font-light">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-            </div>
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
-          </div>
-        </div>
-
-        <!-- card -->
-        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Impact of the 2015 El Niño and post El Niño weather condition on palm and vegetable oil supplies and prices</a>
-          <p class="font-light">Director, Gan Ling Sdn....</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-            </div>
-
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
-          </div>
-        </div>
-
-        <!-- card -->
-        <div class="  sm:border border-b border-gray-400 mb-4 py-4 px-4">
-          <a href="detail.html" class="text-4xl font-black cursor-pointer  hover:text-green-800">Palm Kernel Cake: Inherent Properties Raise Global Feed Market Opportunities</a>
-          <p class="font-light">Palm Kernel Cake (PKC) has moved up steeply in the value chain. From an average annual price of US$50/MT that was traded in 1999, the price of PKC has...</p>
-          <div class="flex space-x-3 mb-8">
-            <p class="font-light"><a class="font-semibold">46</a> Views </p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-            <p class="border-l"></p>
-            <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-          </div>
-          <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
-            <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Mr. Veysel Kaya</a>
-                  <a class="font-light">Sunseedman</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Tan Sri Datuk Dr. Yusof Basiron</a>
-                  <a class="font-light">MPOC</a>
-                </div>
-                <div class="flex flex-col items-center">
-                  <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker40.jpg" alt="" class="rounded-full w-16 h-16">
-                  <a class="mt-1 font-semibold">Dr. Kerstin Busch</a>
-                </div>
-            </div>
-            <a href="detail.html" class="text-white bg-black sm:rounded-full rounded sm:h-16 h-8 sm:w-16 w-full flex items-center justify-center cursor-pointer hover:bg-green-800">View</a>
-          </div>
-        </div>
-
-
+        
         <!-- footer -->
         <footer class="bg-black px-4 py-4">
           <div class="sm:flex flex-row justify-between sm:space-y-0 space-y-6">
