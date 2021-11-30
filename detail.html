@@ -11,220 +11,275 @@
     
     
     <div class="max-w-6xl mx-auto" x-data="{ archive:false, search:false, form:false }">
-        <!-- header -->
-        <header class="sticky top-0 z-10 flex px-2 py-2 justify-between items-center border-b border-opacity-20 bg-black ">
-            <div class="flex space-x-3 items-center">
-                <template x-if="!archive">
-                  <svg  @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-                  </svg>
-                </template>
-                <template x-if="archive">
-                  <svg @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </template>
-                  <a href="index.html" class="text-white font-semibold text-2xl hover:text-gray-400">POINTERS</a>
-            </div>
-            <div class="flex space-x-3">
-                <svg @click="search = ! search, archive = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                  <svg @click="form= !form, archive = false, search= false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-            </div>
-        </header>
-
-        <!-- Archive  -->
-        <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"  
-            x-show="archive"
-            x-transition:enter="transition ease-in-out duration-150"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="transition ease-in-out duration-150"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            x-cloak style="display: none !important"
-            x-data="{ state2021:false, state2020:false, state2019: false} "
-            >
-
-
-            <h2 class="text-3xl text-white mb-4">Archive</h2>
-              
-            <!-- 2021 -->
-            <div @click="state2021 = ! state2021" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
-              <a class="text-2xl font-black text-white">2021</a>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <div x-show="state2021"  x-cloak style="display: none !important" class="mb-6 px-6">
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
-              </div>
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white">11-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
-              </div>
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white">22-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
-              </div>
-            </div>
-
-            <!-- 2020 -->
-            <div @click="state2020 = ! state2020" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
-              <a class="text-2xl font-black text-white">2020</a>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <div x-show="state2020"  x-cloak style="display: none !important" class="mb-6 px-6">
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
-              </div>
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white">11-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
-              </div>
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white">22-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
-              </div>
-            </div>
-
-
-            <!-- 2019 -->
-            <div @click="state2019 = ! state2019" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer">
-              <a class="text-2xl font-black text-white">2019</a>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <div x-show="state2019"  x-cloak style="display: none !important" class="mb-6 px-6">
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white ">05-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 1: CPO Price Trend</p>
-              </div>
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white">11-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 2 : Global Palm Oil Market Focus</p>
-              </div>
-              <div class="mb-2 cursor-pointer">
-                <a class="font-light text-sm text-white">22-11 APR 2021</a>
-                <p class="text-2xl font-black text-white">FDD 3 :  Price Directions</p>
-              </div>
-            </div>
-        </div>
-
-        <!-- search -->
-        <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
-        x-show="search"
-        x-transition:enter="transition ease-in-out duration-150"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in-out duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        x-cloak style="display: none !important"
-        >
-          <div class="relative text-gray-600 focus-within:text-gray-400 py-6">
-            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-              <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-              </button>
-            </span>
-            <input type="search" name="q" class=" w-full py-3 text-sm text-gray-200 bg-gray-600 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
+         <!-- header -->
+         <header class="sticky top-0 z-10 flex px-2 py-2 justify-between items-center border-b border-opacity-20 bg-black ">
+          <div class="flex space-x-3 items-center">
+              <template x-if="!archive">
+                <svg  @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+              </template>
+              <template x-if="archive">
+                <svg @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </template>
+                <a href="index.html" class="text-white font-semibold text-2xl hover:text-gray-400">POINTERS</a>
           </div>
-        </div>
+          <div class="flex space-x-3">
+              <svg @click="search = ! search, archive = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <svg @click="form= !form, archive = false, search= false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400"" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+          </div>
+      </header>
 
-        <!-- form -->
-        <div class="fixed flex items-center h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
-        x-show="form"
-        x-transition:enter="transition ease-in-out duration-150"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in-out duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        x-cloak style="display: none !important"
-        x-data="{formLogin:true, formRegister:false}"
-        >
+      <!-- Archive  -->
+      <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"  
+          x-show="archive"
+          x-transition:enter="transition ease-in-out duration-150"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease-in-out duration-150"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          x-cloak style="display: none !important"
+          x-data="{ state2021:false, state2020:false, state2019: false} "
+          >
 
-          <!-- form login -->
-          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formLogin" x-cloak style="display: none !important">
-            <form>
-                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
-                  <div class="px-6  mb-4">
-                      <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
-                      <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
-                  </div>
-                  <div class="px-6  mb-4">
-                      <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
-                      <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
-                  </div>
-                  <div class="px-6 mb-4 text-right">
-                      <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                          Login
-                      </button>
-                      <p class=" text-center mt-4 "><a @click="formLogin = false, formRegister = true" class="hover:underline cursor-pointer">Register</a></p>
-                  </div>
-              </form>
+
+          <h2 class="text-3xl text-white mb-4">Archive</h2>
+            
+          <!-- 2021 -->
+          <div @click="state2021 = ! state2021" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
+            <a class="text-2xl font-black text-white">2021</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </div>
+          <div x-show="state2021"  x-cloak style="display: none !important" class="mb-6 px-6">
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 1: CPO Price Trend</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white">11-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 2 : Global Palm Oil Market Focus</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white">22-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 3 :  Price Directions</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- form Register -->
-          <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="formRegister" x-cloak style="display: none !important">
-            <form>
-                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
-                  <div class="px-6  mb-4">
-                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Name:</label>
+          <!-- 2020 -->
+          <div @click="state2020 = ! state2020" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer" >
+            <a class="text-2xl font-black text-white">2020</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </div>
+          <div x-show="state2020"  x-cloak style="display: none !important" class="mb-6 px-6">
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 1: CPO Price Trend</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white">11-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 2 : Global Palm Oil Market Focus</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white">22-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 3 :  Price Directions</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- 2019 -->
+          <div @click="state2019 = ! state2019" class="flex mb-2 justify-between border-b-2 border-white py-2 cursor-pointer">
+            <a class="text-2xl font-black text-white">2019</a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            </svg>
+          </div>
+          <div x-show="state2019"  x-cloak style="display: none !important" class="mb-6 px-6">
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white ">05-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 1: CPO Price Trend</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white">11-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 2 : Global Palm Oil Market Focus</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+            <div class="mb-2 cursor-pointer" x-data="{item:false}">
+              <a class="font-light text-sm text-white">22-11 APR 2021</a>
+              <p class="text-2xl font-black text-white" @click="item=!item">FDD 3 :  Price Directions</p>
+              <ul class="px-6 py-4 list-disc space-y-2" x-show="item">
+                <li class="hover:text-white  text-gray-400">Global Palm Oil S&D Forecast for 1st Half 2021</li>
+                <li class="hover:text-white  text-gray-400">Malaysian Palm Oil Performance and Prospects for 2021</li>
+                <li class="hover:text-white  text-gray-400">Palm Oil: Challenges, Possibilities and Price Direction 2021</li>
+                <li class="hover:text-white  text-gray-400">Logistic Challenges During COVID-19 and Its Impact on Palm Oil Trade</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+      <!-- search -->
+      <div class="fixed h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
+      x-show="search"
+      x-transition:enter="transition ease-in-out duration-150"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in-out duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      x-cloak style="display: none !important"
+      >
+        <div class="relative text-gray-600 focus-within:text-gray-400 py-6">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6 text-gray-400"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+          </span>
+          <input type="search" name="q" class=" w-full py-3 text-sm text-gray-200 bg-gray-600 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Search..." autocomplete="off">
+        </div>
+      </div>
+
+      <!-- form -->
+      <div class="fixed flex items-center h-screen z-20 bg-black overflow-y-auto sm:w-pointers w-full sm:px-6 px-4 py-4"
+      x-show="form"
+      x-transition:enter="transition ease-in-out duration-150"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in-out duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      x-cloak style="display: none !important"
+      x-data="{form1: 'login'}"
+      >
+
+        <!-- form login -->
+        <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'login'" x-cloak style="display: none !important">
+          <form>
+                <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
+                <div class="px-6  mb-4">
+                    <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
                     <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
                 </div>
-                  <div class="px-6  mb-4">
-                      <label  class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
-                      <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
-                  </div>
-                  <div class="px-6  mb-4">
-                      <label  class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
-                      <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
-                  </div>
-                  <div class="px-6  mb-4">
-                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Confirm Password:</label>
+                <div class="px-6  mb-4">
+                    <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
+                    <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                <div class="px-6 mb-4 text-right">
+                    <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                        Login
+                    </button>
+                    <p class=" text-center mt-4 "><a @click.prevent="form1 = 'register'" class="hover:underline cursor-pointer">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- form Register -->
+        <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'register'" x-cloak style="display: none !important">
+          <form>
+                <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
+                <div class="px-6  mb-4">
+                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Name:</label>
+                  <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+              </div>
+                <div class="px-6  mb-4">
+                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
+                    <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                </div>
+                <div class="px-6  mb-4">
+                    <label  class="block text-gray-700 text-sm font-semibold mb-2">Password:</label>
                     <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
                 </div>
                 <div class="px-6  mb-4">
-                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Company:</label>
-                  <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Confirm Password:</label>
+                  <input type="password" class=" appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+              </div>
+              <div class="px-6  mb-4">
+                <label  class="block text-gray-700 text-sm font-semibold mb-2">Company:</label>
+                <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
+              </div>
+              <div class="px-6  mb-4">
+                <label  class="block text-gray-700 text-sm font-semibold mb-2">Country:</label>
+                <div class="relative inline-flex w-full">
+                  <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+                  <select class="border border-gray-400 rounded w-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
+                    <option>Select country</option>
+                    <option>Indonesia</option>
+                    <option>Malaysia</option>
+                    <option>Singapore</option>
+                    <option>Thailand</option>
+                    <option>Japan</option>
+                    <option>Vietnam</option>
+                    <option>Myanmar</option>
+                    <option>Brunei</option>
+                  </select>
                 </div>
-                <div class="px-6  mb-4">
-                  <label  class="block text-gray-700 text-sm font-semibold mb-2">Country:</label>
-                  <div class="relative inline-flex w-full">
-                    <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
-                    <select class="border border-gray-300 rounded w-full text-gray-600 h-10 pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none">
-                      <option>Select country</option>
-                      <option>Indonesia</option>
-                      <option>Malaysia</option>
-                      <option>Singapore</option>
-                      <option>Thailand</option>
-                      <option>Japan</option>
-                      <option>Vietnam</option>
-                      <option>Myanmar</option>
-                      <option>Brunei</option>
-                    </select>
-                  </div>
+              </div>
+                <div class="px-6 mb-4 text-right">
+                    <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
+                        Submit
+                    </button>
+                    <p class=" text-center mt-4 "><a @click.prevent="form1 = 'login'" class="hover:underline cursor-pointer">Login</a></p>
                 </div>
-                  <div class="px-6 mb-4 text-right">
-                      <button  type="button" class=" inline-flex justify-center  sm:w-1/4 w-full rounded-md border border-transparent px-4 py-2 bg-gray-900 text-base leading-6 font-medium text-white shadow-sm hover:bg-white hover:text-black hover:border-black transition ease-in-out duration-150 sm:text-sm sm:leading-5">
-                          Submit
-                      </button>
-                      <p class=" text-center mt-4 "><a @click="formLogin = true, formRegister = false" class="hover:underline cursor-pointer">Login</a></p>
-                  </div>
-              </form>
-          </div>
+            </form>
         </div>
+      </div>
+
 
 
         <!-- hero -->

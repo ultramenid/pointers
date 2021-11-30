@@ -11,12 +11,12 @@
     
     
     <div class="max-w-6xl mx-auto" x-data="{ archive:false, search:false, form:false }">
-        <!-- header -->
-        <header class="sticky top-0 z-10 flex px-2 py-2 justify-between items-center border-b border-opacity-20 bg-black ">
+         <!-- header -->
+         <header class="sticky top-0 z-10 flex px-2 py-2 justify-between items-center border-b border-opacity-20 bg-black ">
             <div class="flex space-x-3 items-center">
                 <template x-if="!archive">
                   <svg  @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h8M4 12h8M4 18h7" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                   </svg>
                 </template>
                 <template x-if="archive">
@@ -211,7 +211,7 @@
           <!-- form login -->
           <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'login'" x-cloak style="display: none !important">
             <form>
-                  <a class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</a>
+                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
                   <div class="px-6  mb-4">
                       <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
                       <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
@@ -232,7 +232,7 @@
           <!-- form Register -->
           <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'register'" x-cloak style="display: none !important">
             <form>
-                  <a class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</a>
+                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
                   <div class="px-6  mb-4">
                     <label  class="block text-gray-700 text-sm font-semibold mb-2">Name:</label>
                     <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
