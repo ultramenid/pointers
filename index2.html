@@ -16,7 +16,7 @@
             <div class="flex space-x-3 items-center">
                 <template x-if="!archive">
                   <svg  @click="archive = ! archive, search = false, form = false" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white cursor-pointer hover:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h8M4 12h8M4 18h7" />
                   </svg>
                 </template>
                 <template x-if="archive">
@@ -211,7 +211,7 @@
           <!-- form login -->
           <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'login'" x-cloak style="display: none !important">
             <form>
-                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</h1>
+                  <a class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Login</a>
                   <div class="px-6  mb-4">
                       <label for="formName" class="block text-gray-700 text-sm font-semibold mb-2">Email:</label>
                       <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
@@ -232,7 +232,7 @@
           <!-- form Register -->
           <div class="mx-auto  rounded border bg-white w-96 shadow-sm"  x-show="form1 === 'register'" x-cloak style="display: none !important">
             <form>
-                  <h1 class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</h1>
+                  <a class="text-center mt-6 mb-8 text-2xl font-bold text-gray-900"> Register</a>
                   <div class="px-6  mb-4">
                     <label  class="block text-gray-700 text-sm font-semibold mb-2">Name:</label>
                     <input type="text"class="appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" >
@@ -295,101 +295,215 @@
 
         <!-- Highlights -->
         <div class="border-b border-gray-400 mb-6">
-          <h1 class="text-3xl  text-black px-2 py-3">Archive Category</h1>
+          <a class="text-3xl  text-black px-2 py-3">Archive Highlights</a>
         </div>
 
         <!-- card -->
-        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
-          <img src="https://sawit.info/img/ngopini/36d2c2e1-fd5f-45e9-8c59-6f5a319acb70.jpg" alt="" class="sm:w-4/12 w-full h-full">
-          <div class="h-full w-full">
-            <a href="index2.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Updates on Biodiesel Development and Production Forecast in the EU</a>
-            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-            <div class="sm:flex space-x-3 mb-8  hidden">
-              <p class="font-light"><a class="font-semibold">46</a> Views </p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+        <div class="flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-y-4 mb-6 px-4">
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
         </div>
          <!-- card -->
-         <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
-          <img src="https://sawit.info/img/ngopini/cfac1c44-927e-49d8-bb49-5a8d0502ec8f.jpg" alt="" class="sm:w-4/12 w-full h-full">
-          <div class="h-full w-full">
-            <a href="index2.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Malaysian Sustainable Palm Oil (MSPO) Certification Guidelines and Updates</a>
-            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-            <div class="sm:flex space-x-3 mb-8  hidden">
-              <p class="font-light"><a class="font-semibold">46</a> Views </p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+         <div class="flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-y-4 mb-6 px-4">
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
          <!-- card -->
-         <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
-          <img src="https://sawit.info/img/ngopini/96064ccc-1458-4466-b954-6efe36f8d518.jpeg" alt="" class="sm:w-4/12 w-full h-full">
-          <div class="h-full w-full">
-            <a href="index2.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
-            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-            <div class="sm:flex space-x-3 mb-8  hidden">
-              <p class="font-light"><a class="font-semibold">46</a> Views </p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+         <div class="flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-y-4 mb-6 px-4">
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      
-
-         <!-- card -->
-         <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
-          <img src="https://sawit.info/img/ngopini/450e36a4-a929-408d-9f6d-15f7d3805aaa.jpg" alt="" class="sm:w-4/12 w-full h-full">
-          <div class="h-full w-full">
-            <a href="index2.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
-            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-            <div class="sm:flex space-x-3 mb-8  hidden">
-              <p class="font-light"><a class="font-semibold">46</a> Views </p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
-          <img src="https://sawit.info/img/ngopini/911fc260-836c-4a73-8e93-3954882f0ec4.jpg" alt="" class="sm:w-4/12 w-full h-full">
-          <div class="h-full w-full">
-            <a href="index2.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
-            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-            <div class="sm:flex space-x-3 mb-8  hidden">
-              <p class="font-light"><a class="font-semibold">46</a> Views </p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
+            <div class="sm:w-4/12 w-full border rounded px-4 py-4 space-y-4">
+                <a class="font-black" href="detail.html">Updates on Biodiesel Development and Production Forecast in the EU</a>
+                <div class="flex sm:flex-row flex-col justify-between items-center sm:space-y-0 space-y-4">
+                    <div class="flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-4 ">
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker141.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Mr. Veysel Kaya</a>
+                          <a class="font-light mt-4 text-center text-xs">Sunseedman</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                          <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                          <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                          <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img loading="lazy" src="https://www.pointers.org.my/v3/speaker/speaker24.jpg" alt="" class="rounded-full w-8 h-8">
+                            <a class="mt-1 font-semibold text-center text-sm">Tan Sri Datuk Dr. Yusof Basiron</a>
+                            <a class="font-light mt-4 text-center text-xs">MPOC</a>
+                          </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- card -->
-        <div class="sm:border border-b border-gray-400 mb-4 py-4 px-4  flex sm:flex-row flex-col sm:space-x-6 space-x-0 sm:space-y-0 space-y-2">
-          <img src="https://sawit.info/img/ngopini/6ee1da8a-ab23-4111-a07c-5c7fa34aa062.jpeg" alt="" class="sm:w-4/12 w-full h-full">
-          <div class="h-full w-full">
-            <a href="index2.html" class="sm:text-4xl text-xl font-black cursor-pointer  hover:text-green-800">Policy Updates - What Will Be The Key Changes That Influence The Oils And Fats Market in 2012</a>
-            <p class="font-light sm:block hidden">In Europe, a few countries became interested in biofuels in the 1990s; however, the EU as a whole became interested in the subject much later – in 2001 –...</p>
-            <div class="sm:flex space-x-3 mb-8  hidden">
-              <p class="font-light"><a class="font-semibold">46</a> Views </p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">4</a> Comments</p>
-              <p class="border-l"></p>
-              <p class="font-light"><a class="font-semibold">41</a> Likes</p>
-            </div>
-          </div>
         </div>
         
         <!-- footer -->
